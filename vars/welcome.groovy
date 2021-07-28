@@ -23,3 +23,9 @@ def call(int buildNumber) {
     }
   }
 }
+
+
+def getNumber(int buildNumber) {
+  echo "The build number is ${buildNumber}"
+}
+  
