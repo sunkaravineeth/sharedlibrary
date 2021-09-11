@@ -1,4 +1,4 @@
-def calla(int buildNumber) {
+def add(int buildNumber) {
   if (buildNumber % 2 == 0) {
     pipeline {
       agent any
