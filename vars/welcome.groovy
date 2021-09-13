@@ -1,4 +1,6 @@
-def call(int buildNumber) {
+public Map conf
+def call(Map conf) {
+  print currentBuild.rawBuild.getCauses().toString
   pipeline {
     agent any
     stages {
