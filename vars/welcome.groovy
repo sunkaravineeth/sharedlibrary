@@ -1,6 +1,8 @@
 public Map conf
 def call(Map conf) {
   print currentBuild.rawBuild.getCauses().toString
+  print conf.skipSonar
+  print conf.skipFort
   pipeline {
     agent any
     stages {
