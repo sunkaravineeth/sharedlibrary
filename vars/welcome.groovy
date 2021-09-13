@@ -4,7 +4,7 @@ def call(int buildNumber) {
     stages {
         stage('Test') {
             steps {
-                sh 'node --version'
+                echo 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
             }
         }
     }
