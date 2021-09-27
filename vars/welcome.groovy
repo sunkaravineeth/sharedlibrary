@@ -7,11 +7,16 @@ def call(int buildNumber) {
   }
   if (buildNumber % 2 == 0) {
     pipeline {
-      agent any
+      agent {
+        docker {
+          image 'maven:3.8.1-adoptopenjdk-11'
+        }
+      }
       stages {
         stage('Even Stage') {
           steps {
             echo "The build number is even dev branch"
+            sh 'mvn --version'
             script{
               print currentBuild.getBuildCauses().toString()
             }
@@ -21,11 +26,16 @@ def call(int buildNumber) {
     }
   } else {
     pipeline {
-      agent any
+      agent {
+        docker {
+          image 'maven:3.8.1-adoptopenjdk-11'
+        }
+      }
       stages {
         stage('Odd Stage') {
           steps {
             echo "The build number is odd dev branch"
+            sh 'mvn --version'
             script{
               print currentBuild.getBuildCauses().toString()
             }
