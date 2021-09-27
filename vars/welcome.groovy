@@ -1,5 +1,5 @@
-public Map conf
-def call(Map conf) {
+
+def call() {
   if (currentBuild.getBuildCauses().toString().contains('BranchIndexingCause')) {
   print "INFO: Build skipped due to trigger being Branch Indexing"
   currentBuild.result = 'ABORTED' // optves a better hint to the user tha's been skipped, rather than the default which shows it's successful
