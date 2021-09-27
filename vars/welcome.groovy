@@ -14,6 +14,7 @@ def call(int buildNumber) {
             echo "The build number is even dev branch"
             script{
               print currentBuild.getBuildCauses().toString()
+              print skipBranchIndexing
             }
           }
         }
@@ -28,6 +29,7 @@ def call(int buildNumber) {
             echo "The build number is odd dev branch"
             script{
               print currentBuild.getBuildCauses().toString()
+              print skipBranchIndexing
             }
           }
         }
